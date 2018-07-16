@@ -1,0 +1,15 @@
+Last edit by Florent Pons 
+
+
+Downloads:
+Download the KVM edition for Fortigate from the Fortinet website
+Download and install the Qemu software
+Download and install VirtualBox from Oracle
+
+De-zip the KVM edition 
+convert the qcow2 file to a vdi file with:   
+
+qemu-img convert -O vdi FGT_VM64_KVM-v6-build0131-FORTINET.out.kvm\fortios.qcow2 fortios.vdi
+
+In  virtualBox ensure the KVM paravirtualisation is selected under Settings->System->Acceleration
+Create a new VM in VirtualBox and attached the fortios.vdi image as the local disk for that VM
